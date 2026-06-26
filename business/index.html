@@ -104,7 +104,9 @@ header.nav{
   background:rgba(10,24,37,.85);
   backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line);
+  transition:transform .35s ease;
 }
+header.nav.nav-hidden{transform:translateY(-100%)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;height:84px;flex-wrap:nowrap}
 .brand{display:flex;align-items:center;gap:10px;flex:none}
 .brand img{height:54px;width:auto}
@@ -706,6 +708,20 @@ document.getElementById('menuToggle').addEventListener('click', function(){
 document.querySelectorAll('#navLinks a').forEach(a=>{
   a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open'));
 });
+
+/* Hide header on scroll down, reveal on scroll up */
+(function(){
+  const header = document.querySelector('header.nav');
+  const navLinks = document.getElementById('navLinks');
+  let lastY = window.scrollY;
+  window.addEventListener('scroll', function(){
+    const y = window.scrollY;
+    if (navLinks.classList.contains('open')) { header.classList.remove('nav-hidden'); lastY = y; return; }
+    if (y > lastY && y > 120) { header.classList.add('nav-hidden'); }
+    else { header.classList.remove('nav-hidden'); }
+    lastY = y;
+  }, {passive:true});
+})();
 
 /* Scroll reveal */
 const io = new IntersectionObserver((entries)=>{
