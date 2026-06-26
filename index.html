@@ -105,16 +105,16 @@ header.nav{
   backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line);
 }
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:84px}
-.brand{display:flex;align-items:center;gap:10px}
-.brand img{height:56px;width:auto}
-.nav-links{display:flex;align-items:center;gap:30px}
-.nav-links a{font-size:.93rem;font-weight:500;color:var(--ink);transition:color .2s}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;height:84px;flex-wrap:nowrap}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand img{height:46px;width:auto}
+.nav-links{display:flex;align-items:center;gap:18px;flex-wrap:nowrap}
+.nav-links a{font-size:.88rem;font-weight:500;color:var(--ink);transition:color .2s;white-space:nowrap}
 .nav-links a:hover{color:var(--teal)}
-.nav-links a.nav-switch{font-family:var(--font-display);font-weight:600;color:var(--teal);border:1px solid var(--line);padding:7px 14px;border-radius:999px}
+.nav-links a.nav-switch{font-family:var(--font-display);font-weight:600;color:var(--teal);border:1px solid var(--line);padding:6px 12px;border-radius:999px}
 .nav-links a.nav-switch:hover{background:var(--teal);color:#04141d;border-color:var(--teal)}
-.nav-cta{display:flex;align-items:center;gap:16px}
-.nav-email{font-size:.9rem;font-weight:600;color:var(--navy)}
+.nav-cta{display:flex;align-items:center;gap:12px;flex:none;flex-wrap:nowrap}
+.nav-email{font-size:.85rem;font-weight:600;color:var(--navy);white-space:nowrap}
 .menu-toggle{display:none;background:none;border:0;cursor:pointer;font-size:1.5rem;color:var(--navy)}
 
 /* ============================================================
@@ -325,6 +325,11 @@ footer ul li a:hover{color:var(--teal-light)}
 /* ============================================================
    15. RESPONSIVE
    ============================================================ */
+@media (max-width:1180px){
+  .nav-links{display:none}
+  .menu-toggle{display:block}
+  .nav-links.open{display:flex;position:absolute;top:84px;left:0;right:0;flex-direction:column;background:var(--bg);padding:20px 28px;border-bottom:1px solid var(--line);gap:16px}
+}
 @media (max-width:980px){
   .hero-grid,.why-grid,.contact-grid{grid-template-columns:1fr}
   .cards,.quotes{grid-template-columns:1fr 1fr}
@@ -333,9 +338,6 @@ footer ul li a:hover{color:var(--teal-light)}
 }
 @media (max-width:680px){
   section{padding:64px 0}
-  .nav-links{display:none}
-  .menu-toggle{display:block}
-  .nav-links.open{display:flex;position:absolute;top:84px;left:0;right:0;flex-direction:column;background:var(--bg);padding:20px 28px;border-bottom:1px solid var(--line);gap:16px}
   .cards,.quotes,.steps,.field-row,.foot-grid{grid-template-columns:1fr}
   .stats{grid-template-columns:1fr 1fr}
   .cta-banner{padding:44px 26px}
