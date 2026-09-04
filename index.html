@@ -3,7 +3,29 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0a1825" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <title>Careers at Delta Voice — Call Center Jobs in Cairo for English-Speaking Agents</title>
+<link rel="canonical" href="https://delta-voice.com/" />
+<link rel="alternate" hreflang="en" href="https://delta-voice.com/" />
+<link rel="alternate" hreflang="ar" href="https://delta-voice.com/ar/" />
+<link rel="alternate" hreflang="x-default" href="https://delta-voice.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Delta Voice" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:url" content="https://delta-voice.com/" />
+<meta property="og:title" content="Careers at Delta Voice — Call Center Jobs in Cairo" />
+<meta property="og:description" content="We're hiring English-speaking call center agents in Cairo for inbound support, outbound sales, telesales and lead generation serving UK & US clients." />
+<meta property="og:image" content="https://delta-voice.com/icon-512.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Careers at Delta Voice — Call Center Jobs in Cairo" />
+<meta name="twitter:description" content="We're hiring English-speaking call center agents in Cairo for inbound support, outbound sales, telesales and lead generation serving UK & US clients." />
+<meta name="twitter:image" content="https://delta-voice.com/icon-512.png" />
+
 <meta name="description" content="Join Delta Voice in Cairo. We're hiring English-speaking call center agents for inbound support, outbound sales, telesales and lead generation serving UK & US clients. Competitive pay, paid training, real career growth." />
 
 <!-- ============================================================
@@ -319,10 +341,95 @@ footer ul li a:hover{color:var(--teal-light)}
 .foot-bottom p{color:rgba(220,210,185,.5);font-size:.85rem}
 
 /* ============================================================
+   16. HERO 2.0 — floating nav / big hero / trust bar
+   ============================================================ */
+header.nav.nav-scrolled{
+  background:rgba(10,24,37,.94);
+  box-shadow:0 12px 30px -18px rgba(0,0,0,.6);
+}
+header.nav.nav-scrolled .nav-inner{padding-top:10px;padding-bottom:8px}
+header.nav.nav-scrolled .brand img{height:42px}
+
+.hero-top{max-width:760px;margin:0 auto 46px;text-align:center}
+.hero-top .lede{margin-inline:auto}
+.hero-top h1{font-size:clamp(2.5rem,5.2vw,4.2rem)}
+.hero-cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.hero-cta-row .btn-primary svg{transition:transform .2s ease}
+.hero-cta-row .btn-primary:hover svg{transform:translateX(3px)}
+
+.hero-media{
+  position:relative;border-radius:28px;overflow:hidden;
+  aspect-ratio:16/7;
+  background:
+    radial-gradient(700px 400px at 15% 15%, rgba(94,197,214,.35), transparent 60%),
+    radial-gradient(600px 500px at 90% 100%, rgba(232,176,75,.16), transparent 55%),
+    linear-gradient(160deg,var(--panel-deep),var(--navy-dark));
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+.hero-media-badge{
+  position:absolute;top:22px;left:22px;z-index:2;
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.08);backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.15);color:var(--cream);
+  font-size:.8rem;font-weight:600;padding:8px 14px;border-radius:999px;
+}
+.dot-live{width:8px;height:8px;border-radius:50%;background:#5be08a;animation:pulse-live 2s infinite}
+@keyframes pulse-live{0%{box-shadow:0 0 0 0 rgba(91,224,138,.5)}70%{box-shadow:0 0 0 10px rgba(91,224,138,0)}100%{box-shadow:0 0 0 0 rgba(91,224,138,0)}}
+
+.hero-media-graphic{position:absolute;inset:0;display:grid;place-items:center;opacity:.9}
+.hero-waveform{display:flex;align-items:flex-end;gap:6px;height:64px}
+.hero-waveform i{display:block;width:6px;border-radius:4px;transform-origin:bottom center;
+  background:linear-gradient(180deg,var(--teal-light),var(--teal));animation:wave 1.6s ease-in-out infinite}
+.hero-waveform i:nth-child(1){height:30%;animation-delay:0s}
+.hero-waveform i:nth-child(2){height:60%;animation-delay:.1s}
+.hero-waveform i:nth-child(3){height:100%;animation-delay:.2s}
+.hero-waveform i:nth-child(4){height:45%;animation-delay:.3s}
+.hero-waveform i:nth-child(5){height:80%;animation-delay:.4s}
+.hero-waveform i:nth-child(6){height:35%;animation-delay:.5s}
+.hero-waveform i:nth-child(7){height:65%;animation-delay:.6s}
+@keyframes wave{0%,100%{transform:scaleY(.55)}50%{transform:scaleY(1)}}
+@media (prefers-reduced-motion:reduce){.hero-waveform i,.dot-live{animation:none}}
+
+.hero-media-stats{position:absolute;left:22px;right:22px;bottom:22px;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.hm-stat{background:rgba(255,255,255,.08);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:14px 12px;text-align:center}
+.hm-stat b{display:block;font-family:var(--font-display);font-size:1.2rem;color:var(--cream)}
+.hm-stat span{font-size:.7rem;color:rgba(220,210,185,.75)}
+
+/* Trust bar (progressive-blur style infinite slider) */
+.trust-bar{background:var(--panel-deep);padding:32px 0;border-block:1px solid var(--line)}
+.trust-bar-inner{display:flex;align-items:center;gap:28px}
+.trust-label{flex:none;max-width:170px;font-size:.85rem;color:rgba(220,210,185,.75);border-right:1px solid var(--line);padding-right:24px}
+.trust-slider{position:relative;flex:1;overflow:hidden;
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+}
+.trust-track{display:flex;gap:44px;width:max-content;animation:scroll 26s linear infinite}
+.trust-bar:hover .trust-track{animation-play-state:paused}
+.trust-chip{display:inline-flex;align-items:center;gap:10px;color:rgba(220,210,185,.9);font-family:var(--font-display);font-weight:600;font-size:.92rem;white-space:nowrap}
+.trust-chip .dot{width:6px;height:6px;border-radius:50%;background:var(--teal-light)}
+
+@media (max-width:980px){
+  .hero-media{aspect-ratio:4/5}
+  .hero-media-stats{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:680px){
+  .trust-label{display:none}
+  .hero-media-badge{font-size:.72rem;padding:6px 12px}
+  .hm-stat b{font-size:1rem}
+}
+
+/* ============================================================
    14. SCROLL REVEAL
    ============================================================ */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
-.reveal.in{opacity:1;transform:none}
+.reveal{
+  opacity:0;transform:translateY(30px) scale(.97);filter:blur(6px);
+  transition:opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1), filter .9s cubic-bezier(.16,1,.3,1);
+}
+.reveal.in{opacity:1;transform:none;filter:blur(0)}
+@media (prefers-reduced-motion:reduce){
+  .reveal{transition:none;opacity:1;transform:none;filter:none}
+}
 
 /* ============================================================
    15. RESPONSIVE
@@ -346,9 +453,391 @@ footer ul li a:hover{color:var(--teal-light)}
   .nav-email{display:none}
   .brand img{height:40px}
 }
+
+/* ============================================================
+   17. HERO POLISH — floating pill nav, depth, richer motion
+   ============================================================ */
+
+/* Floating nav card instead of full-bleed bar once scrolled */
+header.nav.nav-scrolled{background:transparent;border-bottom-color:transparent;box-shadow:none}
+header.nav.nav-scrolled .nav-inner{
+  background:rgba(10,24,37,.86);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  margin:10px auto;
+  max-width:calc(var(--maxw) - 20px);
+  box-shadow:0 16px 40px -16px rgba(0,0,0,.55);
+  padding-top:10px;padding-bottom:8px;
+}
+header.nav.nav-scrolled .brand img{height:40px;transition:height .3s ease}
+
+/* Depth: dot-grid texture + glow orbs inside the media panel */
+.hero-media{isolation:isolate}
+.hero-media::before{
+  content:"";position:absolute;inset:0;z-index:0;
+  background-image:radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px);
+  background-size:22px 22px;
+  mask-image:radial-gradient(700px 380px at 50% 40%, #000 40%, transparent 85%);
+  -webkit-mask-image:radial-gradient(700px 380px at 50% 40%, #000 40%, transparent 85%);
+}
+.hero-media::after{
+  content:"";position:absolute;z-index:0;width:260px;height:260px;border-radius:50%;
+  right:-70px;bottom:-90px;background:rgba(232,176,75,.14);filter:blur(50px);
+}
+.hero-media-graphic{z-index:1}
+.hero-media-badge{z-index:2;box-shadow:0 6px 18px -8px rgba(0,0,0,.5)}
+.hero-media-stats{z-index:2}
+
+/* Pulse ring behind the waveform for more visual interest */
+.hero-waveform{position:relative}
+.hero-waveform::before{
+  content:"";position:absolute;left:50%;top:50%;width:130px;height:130px;
+  transform:translate(-50%,-50%);border-radius:50%;
+  border:1px solid rgba(94,197,214,.25);
+  animation:ring-pulse 2.6s ease-out infinite;
+}
+@keyframes ring-pulse{0%{transform:translate(-50%,-50%) scale(.6);opacity:.7}100%{transform:translate(-50%,-50%) scale(1.5);opacity:0}}
+@media (prefers-reduced-motion:reduce){.hero-waveform::before{animation:none}}
+
+/* Extra waveform bars for a fuller look */
+.hero-waveform i:nth-child(8){height:50%;animation-delay:.7s}
+.hero-waveform i:nth-child(9){height:25%;animation-delay:.8s}
+
+/* Stat chips: gentle hover lift */
+.hm-stat{transition:transform .2s ease, background .2s ease, border-color .2s ease}
+.hm-stat:hover{transform:translateY(-3px);background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.24)}
+
+/* Trust chips as soft pills, with hover */
+.trust-chip{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
+  padding:9px 16px;border-radius:999px;transition:background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.trust-chip:hover{background:rgba(255,255,255,.1);border-color:rgba(94,197,214,.35);transform:translateY(-2px)}
+
+/* Slightly richer entrance for the media panel */
+.hero-media{animation:media-in .8s cubic-bezier(.16,1,.3,1) both;animation-delay:.15s}
+@keyframes media-in{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hero-media{animation:none}}
+
+/* Tighter, punchier eyebrow pill on the hero */
+.hero-top .pill{box-shadow:0 6px 18px -10px rgba(52,169,194,.5)}
+
+
+/* ============================================================
+/* ============================================================
+   18. TESTIMONIAL STAGE — split layout, interactive person rail
+   ============================================================ */
+.testi-stage{
+  display:grid;grid-template-columns:300px 1fr;gap:34px;align-items:stretch;
+  margin-top:12px;
+}
+
+/* ---- Left: selectable person rail ---- */
+.testi-rail{display:flex;flex-direction:column;gap:10px}
+.testi-person{
+  position:relative;display:flex;align-items:center;gap:13px;width:100%;
+  background:transparent;border:1px solid transparent;border-radius:14px;
+  padding:13px 15px;cursor:pointer;text-align:left;overflow:hidden;
+  font-family:var(--font-body);
+  transition:background .3s ease, border-color .3s ease, transform .3s ease;
+}
+.testi-person:hover{background:rgba(255,255,255,.04);border-color:var(--line);transform:translateX(3px)}
+.testi-person.is-active{background:var(--surface);border-color:rgba(52,169,194,.45)}
+.testi-person .avatar{
+  width:44px;height:44px;flex:none;
+  filter:grayscale(1);opacity:.55;transition:filter .35s ease, opacity .35s ease, transform .35s ease;
+}
+.testi-person.is-active .avatar{filter:none;opacity:1;transform:scale(1.06)}
+.tp-meta{min-width:0}
+.tp-meta b{
+  display:block;font-family:var(--font-display);font-size:.95rem;
+  color:var(--muted);transition:color .3s ease;
+}
+.testi-person.is-active .tp-meta b{color:var(--cream)}
+.tp-meta span{
+  display:block;font-size:.79rem;color:var(--muted);opacity:.75;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+/* autoplay progress line on the active person */
+.tp-progress{
+  position:absolute;left:0;bottom:0;height:2px;width:100%;
+  background:linear-gradient(90deg,var(--teal),var(--teal-light));
+  transform:scaleX(0);transform-origin:left center;opacity:0;
+}
+.testi-person.is-active .tp-progress{opacity:1}
+.testi-person.is-active.is-running .tp-progress{
+  transition:transform var(--testi-dur,5s) linear;transform:scaleX(1);
+}
+
+/* ---- Right: featured quote panel ---- */
+.testi-feature{
+  position:relative;overflow:hidden;
+  background:linear-gradient(150deg,var(--surface),var(--panel-deep));
+  border:1px solid var(--line);border-radius:24px;
+  padding:44px 46px 38px;
+  box-shadow:var(--shadow);
+  display:flex;flex-direction:column;
+  min-height:330px;
+  cursor:grab;
+}
+.testi-feature:active{cursor:grabbing}
+.testi-feature::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(520px 300px at 88% 8%, rgba(52,169,194,.16), transparent 62%);
+}
+.testi-feature::after{
+  content:"\201C";position:absolute;top:-26px;right:26px;pointer-events:none;
+  font-family:var(--font-display);font-size:13rem;line-height:1;
+  color:var(--teal);opacity:.12;
+}
+.tf-inner{position:relative;z-index:1;display:flex;flex-direction:column;height:100%}
+.tf-stars{color:var(--gold);letter-spacing:3px;margin-bottom:20px;font-size:1.05rem}
+.tf-quote{
+  font-family:var(--font-display);font-weight:500;
+  font-size:clamp(1.2rem,2.1vw,1.62rem);line-height:1.5;
+  color:var(--cream);margin:0 0 26px;
+}
+/* word-by-word entrance */
+.tf-quote .w{display:inline-block;opacity:0;transform:translateY(14px);filter:blur(4px)}
+.tf-quote.play .w{animation:word-in .5s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes word-in{to{opacity:1;transform:none;filter:blur(0)}}
+
+.tf-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.tf-who{display:flex;align-items:center;gap:13px;min-width:0}
+.tf-who .avatar{width:48px;height:48px;flex:none}
+.tf-who b{display:block;font-family:var(--font-display);font-size:1rem;color:var(--cream)}
+.tf-who span{font-size:.84rem;color:var(--muted)}
+.tf-nav{display:flex;align-items:center;gap:10px}
+.tf-count{font-family:var(--font-display);font-size:.85rem;color:var(--muted);letter-spacing:1px;margin-right:4px}
+.tf-count b{color:var(--teal-light);font-weight:700}
+.tf-arrow{
+  width:42px;height:42px;border-radius:50%;flex:none;
+  background:rgba(255,255,255,.05);border:1px solid var(--line);
+  color:var(--cream);cursor:pointer;display:grid;place-items:center;padding:0;
+  transition:background .2s ease,border-color .2s ease,transform .2s ease;
+}
+.tf-arrow:hover{background:rgba(52,169,194,.18);border-color:var(--teal);transform:scale(1.08)}
+.tf-arrow:focus-visible{outline:2px solid var(--teal-light);outline-offset:3px}
+.testi-person:focus-visible{outline:2px solid var(--teal-light);outline-offset:2px}
+
+/* transition state while swapping quotes */
+.testi-feature.swapping .tf-inner{opacity:0;transform:translateY(10px);transition:opacity .22s ease, transform .22s ease}
+.tf-inner{transition:opacity .4s ease, transform .4s ease}
+
+@media (max-width:940px){
+  .testi-stage{grid-template-columns:1fr;gap:22px}
+  .testi-rail{flex-direction:row;overflow-x:auto;gap:8px;padding-bottom:6px;scrollbar-width:none}
+  .testi-rail::-webkit-scrollbar{display:none}
+  .testi-person{flex:0 0 auto;min-width:210px}
+  .testi-feature{padding:34px 26px 28px;min-height:0}
+  .testi-feature::after{font-size:9rem;top:-18px;right:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  .tf-quote .w,.testi-person,.tf-inner,.tp-progress{animation:none!important;transition:none!important}
+  .tf-quote .w{opacity:1;transform:none;filter:none}
+}
+
+
+/* Skip link — keyboard users jump past the nav */
+.skip-link{
+  position:absolute;left:-9999px;top:0;z-index:999;
+  background:var(--teal);color:#04141d;font-family:var(--font-display);font-weight:700;
+  padding:12px 20px;border-radius:0 0 10px 0;text-decoration:none;
+}
+.skip-link:focus{left:0}
+
+/* ============================================================
+   19. FAQ ACCORDION
+   ============================================================ */
+.faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{
+  background:var(--surface);border:1px solid var(--line);border-radius:16px;
+  overflow:hidden;transition:border-color .3s ease, background .3s ease;
+}
+.faq-item.is-open{border-color:rgba(52,169,194,.45)}
+.faq-q{
+  width:100%;display:flex;align-items:center;gap:16px;justify-content:space-between;
+  background:none;border:none;cursor:pointer;text-align:left;
+  padding:22px 24px;color:var(--cream);
+  font-family:var(--font-display);font-weight:600;font-size:1.02rem;line-height:1.45;
+  transition:color .2s ease;
+}
+.faq-q:hover{color:var(--teal-light)}
+.faq-q:focus-visible{outline:2px solid var(--teal-light);outline-offset:-3px}
+.faq-ic{
+  flex:none;width:28px;height:28px;border-radius:50%;
+  border:1px solid var(--line);display:grid;place-items:center;
+  transition:transform .35s cubic-bezier(.16,1,.3,1), background .3s ease, border-color .3s ease;
+}
+.faq-item.is-open .faq-ic{transform:rotate(45deg);background:var(--teal);border-color:var(--teal);color:#04141d}
+.faq-a{
+  max-height:0;overflow:hidden;
+  transition:max-height .45s cubic-bezier(.16,1,.3,1);
+}
+.faq-a p{padding:0 24px 22px;color:var(--ink);font-size:.98rem;line-height:1.7;margin:0;opacity:.9}
+@media (prefers-reduced-motion:reduce){.faq-a,.faq-ic{transition:none}}
+
+/* ============================================================
+   20. WHATSAPP BUTTON + STICKY MOBILE CTA
+   ============================================================ */
+.wa-float{
+  position:fixed;right:20px;bottom:20px;z-index:60;
+  width:56px;height:56px;border-radius:50%;
+  background:#25D366;color:#fff;display:grid;place-items:center;
+  box-shadow:0 12px 30px -8px rgba(0,0,0,.5);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.wa-float:hover{transform:scale(1.08);box-shadow:0 16px 36px -8px rgba(0,0,0,.6)}
+.wa-float svg{width:30px;height:30px}
+.wa-float::after{
+  content:"";position:absolute;inset:0;border-radius:50%;
+  border:2px solid #25D366;animation:wa-ring 2.4s ease-out infinite;
+}
+@keyframes wa-ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.6);opacity:0}}
+@media (prefers-reduced-motion:reduce){.wa-float::after{animation:none}}
+
+.sticky-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:55;display:none;
+  gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(10,24,37,.94);backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);
+}
+.sticky-cta .btn{flex:1;justify-content:center;padding:13px 16px}
+@media (max-width:720px){
+  .sticky-cta{display:flex}
+  .wa-float{bottom:84px;width:50px;height:50px}
+  .wa-float svg{width:26px;height:26px}
+  body{padding-bottom:72px}
+}
+
+/* ============================================================
+   21. BACK TO TOP
+   ============================================================ */
+.to-top{
+  position:fixed;right:20px;bottom:86px;z-index:59;
+  width:46px;height:46px;border-radius:50%;
+  background:rgba(10,24,37,.9);backdrop-filter:blur(10px);
+  border:1px solid var(--line);color:var(--cream);
+  display:grid;place-items:center;cursor:pointer;padding:0;
+  opacity:0;visibility:hidden;transform:translateY(10px);
+  transition:opacity .3s ease, transform .3s ease, visibility .3s, background .2s ease, border-color .2s ease;
+}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top:hover{background:var(--teal);border-color:var(--teal);color:#04141d}
+.to-top:focus-visible{outline:2px solid var(--teal-light);outline-offset:3px}
+@media (max-width:720px){.to-top{bottom:146px;width:42px;height:42px}}
+@media (prefers-reduced-motion:reduce){.to-top{transition:opacity .01s}}
+
+.lang-switch{
+  display:inline-flex;align-items:center;gap:6px;
+  border:1px solid var(--line);border-radius:999px;padding:7px 14px;
+  font-size:.82rem;color:var(--muted);text-decoration:none;
+  transition:color .2s ease,border-color .2s ease,background .2s ease;
+}
+.lang-switch:hover{color:var(--cream);border-color:var(--teal);background:rgba(52,169,194,.12)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Delta Voice",
+  "url": "https://delta-voice.com/",
+  "logo": "https://delta-voice.com/icon-512.png",
+  "email": "support@delta-voice.com",
+  "telephone": "+20 110 564 2478",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cairo",
+    "addressCountry": "EG"
+  },
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
+    {
+      "@type": "Country",
+      "name": "United States"
+    }
+  ],
+  "knowsLanguage": [
+    "en",
+    "ar"
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+20 110 564 2478",
+      "email": "support@delta-voice.com",
+      "contactType": "customer service",
+      "availableLanguage": [
+        "English",
+        "Arabic"
+      ]
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need previous call center experience?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We hire both experienced agents and people just starting out. Strong English and the right attitude matter most — we train the right people."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the training paid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Once you accept your offer you start paid training before going live on calls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the hiring process look like?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Four steps: you apply online using the form on this page, we run a short phone screen to hear your English, you interview with the team, then you receive an offer and begin paid training."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which roles are you currently hiring for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Inbound Support Agent, Outbound Sales Agent, Telesales Agent, Lead Generation Specialist, and Team Leader / Supervisor roles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who would I be working with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our clients are businesses in the UK and the US, so you'll be speaking with English-speaking customers every day and building real international experience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is the office?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We work on-site from our office in Cairo, Egypt. If you'd like the exact location or directions before applying, message us on WhatsApp or email support@delta-voice.com."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <!-- ========================= NAV ========================= -->
 <header class="nav" id="top">
@@ -359,9 +848,10 @@ footer ul li a:hover{color:var(--teal-light)}
         <a href="mailto:support@delta-voice.com" class="nav-email">support@delta-voice.com</a>
       </div>
       <a href="#top" class="brand">
-        <img src="logo.png" alt="Delta Voice" />
+        <img src="logo.png" alt="Delta Voice" width="1395" height="323" decoding="async" />
       </a>
       <div class="nav-actions">
+        <a href="/ar/" class="lang-switch" hreflang="ar" lang="ar">العربية</a>
         <a href="#apply" class="btn btn-primary">Apply Now</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
       </div>
@@ -372,52 +862,68 @@ footer ul li a:hover{color:var(--teal-light)}
       <a href="#why">Why Join</a>
       <a href="#look">Who We Want</a>
       <a href="#testimonials">Team Voices</a>
+      <a href="#faq">FAQ</a>
       <a href="#apply">Apply</a>
     </nav>
   </div>
 </header>
 
 <!-- ========================= HERO ========================= -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="reveal">
-      <span class="pill">We're Hiring in Cairo · English-Speaking Agents</span>
-      <h1>Build a real career in a <span>world-class</span> call center.</h1>
-      <p class="lede">Delta Voice is a Cairo-based call center working with UK &amp; US clients. If your English is strong and you love talking to people, join a team that pays well, trains you properly, and helps you grow.</p>
-      <div class="hero-tags">
-        <span class="tag">Competitive pay</span>
-        <span class="tag">Paid training</span>
-        <span class="tag">Real career growth</span>
-      </div>
+<section class="hero" id="main-content">
+  <div class="wrap hero-top reveal">
+    <span class="pill">We're Hiring in Cairo · English-Speaking Agents</span>
+    <h1>Build a real career in a <span>world-class</span> call center.</h1>
+    <p class="lede">Delta Voice is a Cairo-based call center working with UK &amp; US clients. If your English is strong and you love talking to people, join a team that pays well, trains you properly, and helps you grow.</p>
+    <div class="hero-cta-row">
+      <a href="#apply" class="btn btn-primary">
+        <span>Apply Now</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+      </a>
+      <a href="#roles" class="btn btn-ghost">See Open Roles</a>
     </div>
+  </div>
 
-    <div class="hero-card reveal">
-      <h3>Apply in Minutes</h3>
-      <p>No long process. Send us your details and we'll get back to you if there's a match.</p>
-      <a href="#apply" class="btn btn-primary">Apply Now</a>
-      <a href="#roles" class="btn btn-outline-light">See Open Roles</a>
-      <a href="mailto:support@delta-voice.com" class="hero-card-mail">support@delta-voice.com</a>
-
-      <div class="stats">
-        <div class="stat"><b>UK·US</b><span>International Clients</span></div>
-        <div class="stat"><b>Paid</b><span>Training Provided</span></div>
-        <div class="stat"><b>EN·AR</b><span>Bilingual Team</span></div>
-        <div class="stat"><b>Cairo</b><span>On-Site Office</span></div>
+  <div class="wrap">
+    <div class="hero-media reveal">
+      <span class="hero-media-badge"><span class="dot-live"></span>Agents live now · Cairo</span>
+      <div class="hero-media-graphic" aria-hidden="true">
+        <div class="hero-waveform"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="hero-media-stats">
+        <div class="hm-stat"><b>UK·US</b><span>International Clients</span></div>
+        <div class="hm-stat"><b>Paid</b><span>Training Provided</span></div>
+        <div class="hm-stat"><b>EN·AR</b><span>Bilingual Team</span></div>
+        <div class="hm-stat"><b>Cairo</b><span>On-Site Office</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========================= MARQUEE ========================= -->
-<div class="marquee">
-  <div class="marquee-track">
-    <span>Competitive Pay</span><span>Paid Training</span><span>Career Growth</span>
-    <span>Supportive Team</span><span>International Clients</span><span>Performance Bonuses</span>
-    <span>Modern Cairo Office</span><span>Learn From the Best</span>
-    <!-- duplicate for seamless loop -->
-    <span>Competitive Pay</span><span>Paid Training</span><span>Career Growth</span>
-    <span>Supportive Team</span><span>International Clients</span><span>Performance Bonuses</span>
-    <span>Modern Cairo Office</span><span>Learn From the Best</span>
+<!-- ========================= TRUST BAR ========================= -->
+<div class="trust-bar">
+  <div class="wrap trust-bar-inner">
+    <p class="trust-label">Why agents choose Delta Voice</p>
+    <div class="trust-slider">
+      <div class="trust-track">
+        <span class="trust-chip"><span class="dot"></span>Competitive Pay</span>
+        <span class="trust-chip"><span class="dot"></span>Paid Training</span>
+        <span class="trust-chip"><span class="dot"></span>Career Growth</span>
+        <span class="trust-chip"><span class="dot"></span>Supportive Team</span>
+        <span class="trust-chip"><span class="dot"></span>International Clients</span>
+        <span class="trust-chip"><span class="dot"></span>Performance Bonuses</span>
+        <span class="trust-chip"><span class="dot"></span>Modern Cairo Office</span>
+        <span class="trust-chip"><span class="dot"></span>Learn From the Best</span>
+        <!-- duplicate for seamless loop -->
+        <span class="trust-chip"><span class="dot"></span>Competitive Pay</span>
+        <span class="trust-chip"><span class="dot"></span>Paid Training</span>
+        <span class="trust-chip"><span class="dot"></span>Career Growth</span>
+        <span class="trust-chip"><span class="dot"></span>Supportive Team</span>
+        <span class="trust-chip"><span class="dot"></span>International Clients</span>
+        <span class="trust-chip"><span class="dot"></span>Performance Bonuses</span>
+        <span class="trust-chip"><span class="dot"></span>Modern Cairo Office</span>
+        <span class="trust-chip"><span class="dot"></span>Learn From the Best</span>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -563,21 +1069,110 @@ footer ul li a:hover{color:var(--teal-light)}
       <span class="eyebrow">Team voices</span>
       <h2>What it's like to work here</h2>
     </div>
-    <div class="quotes">
-      <div class="quote reveal">
-        <div class="stars">★★★★★</div>
-        <p>“I started with zero experience. The training was paid and patient, and now I lead my own team.”</p>
-        <div class="who"><div class="avatar">MA</div><div><b>Mariam A.</b><span>Team Leader</span></div></div>
+
+    <div class="testi-stage reveal" data-testi>
+      <!-- Left: pick a person -->
+      <div class="testi-rail" role="tablist" aria-label="Choose a team member">
+        <button class="testi-person is-active" role="tab" aria-selected="true" data-i="0">
+          <div class="avatar">MA</div>
+          <div class="tp-meta"><b>Mariam A.</b><span>Team Leader</span></div>
+          <i class="tp-progress"></i>
+        </button>
+        <button class="testi-person" role="tab" aria-selected="false" data-i="1">
+          <div class="avatar">YH</div>
+          <div class="tp-meta"><b>Youssef H.</b><span>Telesales Agent</span></div>
+          <i class="tp-progress"></i>
+        </button>
+        <button class="testi-person" role="tab" aria-selected="false" data-i="2">
+          <div class="avatar">NF</div>
+          <div class="tp-meta"><b>Nour F.</b><span>Inbound Support Agent</span></div>
+          <i class="tp-progress"></i>
+        </button>
       </div>
-      <div class="quote reveal">
-        <div class="stars">★★★★★</div>
-        <p>“The bonuses are real — when you perform, you get rewarded. My English improved a lot too.”</p>
-        <div class="who"><div class="avatar">YH</div><div><b>Youssef H.</b><span>Telesales Agent</span></div></div>
+
+      <!-- Right: featured quote -->
+      <div class="testi-feature" tabindex="0" aria-live="polite">
+        <div class="tf-inner">
+          <div class="tf-stars">★★★★★</div>
+          <p class="tf-quote"></p>
+          <div class="tf-foot">
+            <div class="tf-who">
+              <div class="avatar"></div>
+              <div><b></b><span></span></div>
+            </div>
+            <div class="tf-nav">
+              <span class="tf-count"><b>01</b> / 03</span>
+              <button class="tf-arrow" data-dir="-1" aria-label="Previous testimonial">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <button class="tf-arrow" data-dir="1" aria-label="Next testimonial">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="quote reveal">
-        <div class="stars">★★★★★</div>
-        <p>“Managers actually care. It feels like a team, not a factory. Best job I've had in Cairo.”</p>
-        <div class="who"><div class="avatar">NF</div><div><b>Nour F.</b><span>Inbound Support Agent</span></div></div>
+    </div>
+
+    <script type="application/json" data-testi-data>
+    [
+      {"initials":"MA","name":"Mariam A.","role":"Team Leader","quote":"I started with zero experience. The training was paid and patient, and now I lead my own team."},
+      {"initials":"YH","name":"Youssef H.","role":"Telesales Agent","quote":"The bonuses are real — when you perform, you get rewarded. My English improved a lot too."},
+      {"initials":"NF","name":"Nour F.","role":"Inbound Support Agent","quote":"Managers actually care. It feels like a team, not a factory. Best job I've had in Cairo."}
+    ]
+    </script>
+  </div>
+</section>
+
+<!-- ========================= FAQ ========================= -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Questions</span>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq-list reveal" data-faq>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Do I need previous call center experience?</span>
+          <span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><p>No. We hire both experienced agents and people just starting out. Strong English and the right attitude matter most — we train the right people.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Is the training paid?</span>
+          <span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Yes. Once you accept your offer you start paid training before going live on calls.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>What does the hiring process look like?</span>
+          <span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Four steps: you apply online using the form on this page, we run a short phone screen to hear your English, you interview with the team, then you receive an offer and begin paid training.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Which roles are you currently hiring for?</span>
+          <span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Inbound Support Agent, Outbound Sales Agent, Telesales Agent, Lead Generation Specialist, and Team Leader / Supervisor roles.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Who would I be working with?</span>
+          <span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Our clients are businesses in the UK and the US, so you'll be speaking with English-speaking customers every day and building real international experience.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Where is the office?</span>
+          <span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><p>We work on-site from our office in Cairo, Egypt. If you'd like the exact location or directions before applying, message us on WhatsApp or email support@delta-voice.com.</p></div>
       </div>
     </div>
   </div>
@@ -631,6 +1226,7 @@ footer ul li a:hover{color:var(--teal-light)}
       <div class="form-tabs-wrap reveal">
         <!-- JOIN OUR TEAM FORM -->
         <form class="lead" id="panel-career" action="https://formspree.io/f/xwvznprq" method="POST" onsubmit="handleSubmit(event,'careerNote')" style="padding:28px">
+          <input type="hidden" name="_source" value="Careers page — job application" />
           <input type="hidden" name="_subject" value="New job application from delta-voice.com">
           <input type="hidden" name="form_type" value="Job Application">
           <div class="field-row">
@@ -702,7 +1298,7 @@ footer ul li a:hover{color:var(--teal-light)}
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a href="#top" class="brand"><img src="logo.png" alt="Delta Voice"></a>
+        <a href="#top" class="brand"><img src="logo.png" alt="Delta Voice" width="1395" height="323" loading="lazy" decoding="async"></a>
         <p class="foot-about">A Cairo-based call center building careers for English-speaking talent — working with UK &amp; US clients.</p>
       </div>
       <div>
@@ -747,6 +1343,7 @@ document.querySelectorAll('#navLinks a').forEach(a=>{
   let lastY = window.scrollY;
   window.addEventListener('scroll', function(){
     const y = window.scrollY;
+    header.classList.toggle('nav-scrolled', y > 10);
     if (navLinks.classList.contains('open')) { header.classList.remove('nav-hidden'); lastY = y; return; }
     if (y > lastY && y > 120) { header.classList.add('nav-hidden'); }
     else { header.classList.remove('nav-hidden'); }
@@ -759,6 +1356,187 @@ const io = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+/* Back to top */
+(function(){
+  const btn = document.querySelector('.to-top');
+  if(!btn) return;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.addEventListener('scroll', function(){
+    btn.classList.toggle('show', window.scrollY > 600);
+  }, {passive:true});
+  btn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior: reduceMotion ? 'auto' : 'smooth'});
+  });
+})();
+
+/* FAQ accordion */
+document.querySelectorAll('[data-faq]').forEach(function(list){
+  const items = Array.from(list.querySelectorAll('.faq-item'));
+  items.forEach(function(item){
+    const btn = item.querySelector('.faq-q');
+    const ans = item.querySelector('.faq-a');
+    btn.addEventListener('click', function(){
+      const open = item.classList.contains('is-open');
+      items.forEach(function(o){
+        o.classList.remove('is-open');
+        o.querySelector('.faq-q').setAttribute('aria-expanded','false');
+        o.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!open){
+        item.classList.add('is-open');
+        btn.setAttribute('aria-expanded','true');
+        ans.style.maxHeight = ans.scrollHeight + 'px';
+      }
+    });
+  });
+  window.addEventListener('resize', function(){
+    const open = list.querySelector('.faq-item.is-open .faq-a');
+    if(open) open.style.maxHeight = open.scrollHeight + 'px';
+  });
+});
+
+
+/* Interactive testimonial stage — person rail + animated quote */
+document.querySelectorAll('[data-testi]').forEach(function(stage){
+  const dataEl = stage.parentElement.querySelector('[data-testi-data]');
+  if(!dataEl) return;
+  let items = [];
+  try { items = JSON.parse(dataEl.textContent); } catch(e){ return; }
+  if(items.length < 2) return;
+
+  const people   = Array.from(stage.querySelectorAll('.testi-person'));
+  const feature  = stage.querySelector('.testi-feature');
+  const quoteEl  = stage.querySelector('.tf-quote');
+  const avatarEl = stage.querySelector('.tf-who .avatar');
+  const nameEl   = stage.querySelector('.tf-who b');
+  const roleEl   = stage.querySelector('.tf-who span');
+  const countEl  = stage.querySelector('.tf-count b');
+  const totalEl  = stage.querySelector('.tf-count');
+  const arrows   = Array.from(stage.querySelectorAll('.tf-arrow'));
+  const DUR = 6000;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  let idx = 0, timer = null;
+  stage.style.setProperty('--testi-dur', (DUR/1000) + 's');
+  if(totalEl) totalEl.innerHTML = '<b>01</b> / ' + String(items.length).padStart(2,'0');
+
+  function paintQuote(text){
+    quoteEl.classList.remove('play');
+    quoteEl.innerHTML = '';
+    const words = text.split(' ');
+    words.forEach(function(w, i){
+      const span = document.createElement('span');
+      span.className = 'w';
+      span.textContent = w;
+      span.style.animationDelay = (i * 26) + 'ms';
+      quoteEl.appendChild(span);
+      if(i < words.length - 1) quoteEl.appendChild(document.createTextNode(' '));
+    });
+    void quoteEl.offsetWidth;
+    quoteEl.classList.add('play');
+  }
+
+  function render(animate){
+    const it = items[idx];
+    people.forEach(function(p, i){
+      const on = i === idx;
+      p.classList.toggle('is-active', on);
+      p.setAttribute('aria-selected', on ? 'true' : 'false');
+      p.classList.remove('is-running');
+    });
+    avatarEl.textContent = it.initials;
+    nameEl.textContent   = it.name;
+    roleEl.textContent   = it.role;
+    if(countEl) countEl.textContent = String(idx + 1).padStart(2,'0');
+    paintQuote('\u201C' + it.quote + '\u201D');
+    if(animate !== false && !reduceMotion){
+      feature.classList.add('swapping');
+      setTimeout(function(){ feature.classList.remove('swapping'); }, 20);
+    }
+    armProgress();
+  }
+
+  function armProgress(){
+    if(reduceMotion || !timer) return;
+    const active = people[idx];
+    if(!active) return;
+    void active.offsetWidth;
+    active.classList.add('is-running');
+  }
+
+  function go(i){ idx = (i + items.length) % items.length; render(true); }
+  function next(){ go(idx + 1); }
+  function start(){ if(reduceMotion || timer) return; timer = setInterval(next, DUR); armProgress(); }
+  function stop(){ clearInterval(timer); timer = null; people.forEach(p=>p.classList.remove('is-running')); }
+  function restart(){ stop(); start(); }
+
+  people.forEach(function(p, i){
+    p.addEventListener('click', function(){ go(i); restart(); });
+  });
+  arrows.forEach(function(btn){
+    btn.addEventListener('click', function(){ go(idx + Number(btn.dataset.dir)); restart(); });
+  });
+
+  stage.addEventListener('mouseenter', stop);
+  stage.addEventListener('mouseleave', start);
+  stage.addEventListener('focusin', stop);
+
+  feature.addEventListener('keydown', function(e){
+    if(e.key === 'ArrowRight'){ e.preventDefault(); go(idx + 1); restart(); }
+    if(e.key === 'ArrowLeft'){  e.preventDefault(); go(idx - 1); restart(); }
+  });
+
+  /* swipe / drag */
+  let x0 = null;
+  function down(x){ x0 = x; }
+  function up(x){
+    if(x0 === null) return;
+    const dx = x - x0; x0 = null;
+    if(Math.abs(dx) > 45){ go(idx + (dx < 0 ? 1 : -1)); restart(); }
+  }
+  feature.addEventListener('touchstart', e => down(e.touches[0].clientX), {passive:true});
+  feature.addEventListener('touchend',   e => up(e.changedTouches[0].clientX), {passive:true});
+  feature.addEventListener('mousedown',  e => down(e.clientX));
+  window.addEventListener('mouseup',     e => up(e.clientX));
+
+  const tIO = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ e.isIntersecting ? start() : stop(); });
+  }, {threshold:.35});
+  tIO.observe(stage);
+
+  render(false);
+});
+
+
+/* Apple-style scroll-scrubbed hero: fades/blurs/shrinks the headline
+   and gives the media panel a subtle parallax + scale as you scroll in. */
+(function(){
+  const heroTop   = document.querySelector('.hero-top');
+  const heroMedia = document.querySelector('.hero-media');
+  const heroSection = document.querySelector('.hero');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!heroTop || !heroMedia || !heroSection || reduceMotion) return;
+
+  let ticking = false;
+  function update(){
+    const rect = heroSection.getBoundingClientRect();
+    let p = (-rect.top) / (rect.height * 0.85);
+    p = Math.min(Math.max(p, 0), 1);
+
+    heroTop.style.opacity   = String(1 - p);
+    heroTop.style.transform = `translateY(${p * -40}px) scale(${1 - p * 0.05})`;
+    heroTop.style.filter    = `blur(${p * 5}px)`;
+
+    heroMedia.style.transform = `translateY(${rect.top * -0.07}px) scale(${1 + p * 0.03})`;
+
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if(!ticking){ requestAnimationFrame(update); ticking = true; }
+  }, {passive:true});
+  update();
+})();
+
 
 /* Tab switching */
 function switchTab(tab){
@@ -808,5 +1586,15 @@ async function handleSubmit(e, noteId){
   }
 }
 </script>
+<button class="to-top" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+<a class="wa-float" href="https://wa.me/201105642478?text=Hi%20Delta%20Voice%2C%20I%27d%20like%20to%20apply%20for%20a%20role" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.09 3.2 5.07 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z"/><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Z"/></svg>
+</a>
+<div class="sticky-cta">
+  <a href="#apply" class="btn btn-primary">Apply Now</a>
+  <a href="tel:+201105642478" class="btn btn-ghost">Call Us</a>
+</div>
 </body>
 </html>
